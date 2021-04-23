@@ -12,7 +12,7 @@ class Hangman:
         self.possible_words = ['becode','learning','mathematics','sessions']
         self.word_to_find = list(str(random.choice(self.possible_words)))
         self.lives = 5
-        self.correctly_guessed_letters = ["_"]*len(self.word_to_find) 
+        self.correctly_guessed_letters = ["_"]*len(self.word_to_find) ### utiliser une boucle en une ligne ! ['_'] for elem in self.word_to_find
         self.wrongly_guessed_letters = []
         self.turn_count = 0
         self.error_count = 0
@@ -21,7 +21,7 @@ class Hangman:
 
 
     def play(self):
-        while(self.lives>=0 and self.word_to_find != self.correctly_guessed_letters):
+        while(self.lives>=0 and self.word_to_find != self.correctly_guessed_letters): ### utiliser une methode recursive plutot que le while
             input_letter = str(input("Enter a letter : "))
             if(re.match("^[a-z]{1}",input_letter)):
                 for letter in self.word_to_find:
