@@ -21,7 +21,7 @@ class Hangman:
 
 
     def play(self):
-        while(self.lives>=0 and self.word_to_find != self.correctly_guessed_letters): ### utiliser une methode recursive plutot que le while
+        while(self.lives>=0 and self.word_to_find != self.correctly_guessed_letters): ### utiliser une methode recursive plutot que le while def play(): if self.lives>1 : self.play()
             input_letter = str(input("Enter a letter : "))
             if(re.match("^[a-z]{1}",input_letter)):
                 for letter in self.word_to_find:
